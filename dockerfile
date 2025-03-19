@@ -1,0 +1,18 @@
+FROM python
+
+EXPOSE 8501
+
+WORKDIR /app
+
+RUN apt update 
+
+COPY requirements.txt requirements.txt 
+
+COPY app/ .
+
+RUN pip install -r requirements.txt
+
+CMD [ "streamlit", "run", "streamlit_app.py"]
+
+
+
