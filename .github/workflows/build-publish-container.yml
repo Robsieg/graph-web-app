@@ -17,7 +17,7 @@ jobs:
   steps:
       name: Checkout
       uses: actions/checkout@v4 
-      name: build image 
+      name: build-image 
       run: docker build ./app -t ghcr.io/robsieg/dev-graph-data-webapp:latest
-      name: push image to github container hub
+      name: push_image_to_ghcr
       run: docker push ghcr.io/robsieg/dev-graph-data-webapp:latest
