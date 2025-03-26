@@ -15,9 +15,9 @@ jobs:
     runs-on: ubuntu-latest
  
   steps:
-  - name: Checkout code
-    uses: actions/checkout@v4 
-  - name: build image 
-    run: docker build ./ -t ghcr.io/robsieg/dev-graph-data-webapp:latest
-  - name: push image to github container hub
-    run: docker push ghcr.io/robsieg/dev-graph-data-webapp:latest
+      name: Checkout
+      uses: actions/checkout@v4 
+      name: build image 
+      run: docker build ./app -t ghcr.io/robsieg/dev-graph-data-webapp:latest
+      name: push image to github container hub
+      run: docker push ghcr.io/robsieg/dev-graph-data-webapp:latest
