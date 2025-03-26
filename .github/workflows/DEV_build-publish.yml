@@ -11,7 +11,7 @@ on:
       - dev
 
 jobs:
-  Build & Publish DEV image:
+  Build And Publish DEV image:
     
     runs-on: ubuntu-latest
 
