@@ -10,6 +10,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: build-image
-        run: docker build ./app -t ghcr.io/robsieg/dev-graph-data-webapp:latest
+        run: docker build /workspaces/codespaces-blank/app -t ghcr.io/robsieg/dev-graph-data-webapp:latest
       - name: push_image_to_ghcr
         run: docker push ghcr.io/robsieg/dev-graph-data-webapp:latest
