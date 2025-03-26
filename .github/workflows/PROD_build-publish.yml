@@ -11,7 +11,7 @@ on:
       
 
 jobs:
-  Build And Publish PROD image:
+  Build_Publish_PROD_image:
     runs-on: ubuntu-latest
 
     steps:
