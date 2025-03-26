@@ -9,7 +9,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: build-image
-        run: docker build /workspaces/codespaces-blank/app -t ghcr.io/robsieg/dev-graph-data-webapp:latest
-      - name: push_image_to_ghcr
+
+      - name: Build Docker Image
+        run: docker build -t ghcr.io/robsieg/dev-graph-data-webapp:latest ./app
+
+      - name: Push Docker Image to GHCR
         run: docker push ghcr.io/robsieg/dev-graph-data-webapp:latest
